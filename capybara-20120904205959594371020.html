@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="ui-mobile ui-loading"><head><base href="http://localhost:3000/" />
+  <title>Lcbobuddy</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,maximum-scale=1, user-scalable=no" name="viewport" /> 
+  <link type="text/css" rel="stylesheet" media="all" href="/assets/application.css?body=1" />
+<link type="text/css" rel="stylesheet" media="all" href="/assets/custom.css?body=1" />
+<link type="text/css" rel="stylesheet" media="all" href="/assets/jquery.mobile-1.1.0-rc.1.min.css?body=1" />
+<link type="text/css" rel="stylesheet" media="all" href="/assets/lcbobuddy.min.css?body=1" />
+<link type="text/css" rel="stylesheet" media="all" href="/assets/pages.css?body=1" />
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/assets/jquery.js?body=1"></script>
+<script type="text/javascript" src="/assets/jquery_ujs.js?body=1"></script>
+<script type="text/javascript" src="/assets/jquery-1.7.1.min.js?body=1"></script>
+<script type="text/javascript" src="/assets/jquery.mobile-1.1.0-rc.1.min.js?body=1"></script>
+<script type="text/javascript" src="/assets/main.js?body=1"></script>
+<script type="text/javascript" src="/assets/pages.js?body=1"></script>
+<script type="text/javascript" src="/assets/application.js?body=1"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="5S2SRWgNYxw1i2CpTNNpnabQgd0DjogEvYPPfiZeUwc=" />
+  
+  <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29875788-2']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                if ( document.location.protocol == 'http:' ) {
+                   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                }
+            })();
+
+</script>
+</head>
+<body class="ui-mobile-viewport">
+
+        
+        <!-- main listsings page -->
+        <div data-theme="a" tabindex="0" id="page_reviews_list" data-role="page" data-url="page_reviews_list" class="ui-page ui-body-a ui-page-header-fixed ui-page-footer-fixed ui-page-active" style="padding-top: 42px; padding-bottom: 58px; min-height: 762px;">
+
+            <div style="" role="banner" data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown">
+                <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">LCBO Buddy</h1>
+            </div><!-- /header -->
+
+            <div role="main" data-role="content" class="ui-content">
+                <div id="info_box"></div>
+                <form class="ui-listview-filter ui-bar-c ui-listview-filter-inset" role="search"><div class="ui-input-search ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-icon-searchfield ui-body-c"><input placeholder="Filter items..." data-type="search" class="ui-input-text ui-body-c" /><a title="clear text" class="ui-input-clear ui-btn ui-btn-up-c ui-btn-icon-notext ui-btn-corner-all ui-shadow ui-input-clear-hidden" href="#" data-corners="true" data-shadow="true" data-iconshadow="true" data-inline="false" data-wrapperels="span" data-icon="delete" data-iconpos="notext" data-mini="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">clear text</span><span class="ui-icon ui-icon-delete ui-icon-shadow"></span></span></a></div></form><ul id="listings_listview" data-filter="true" data-inset="true" data-role="listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                </ul>
+                <div data-role="productdetails"></div>
+            </div><!-- /content -->
+            
+            <div style="" role="contentinfo" data-id="main-footer" data-position="fixed" data-role="footer" class="ui-footer ui-bar-a ui-footer-fixed slideup">
+                <div role="navigation" data-role="navbar" class="ui-navbar">
+                    <ul class="ui-grid-b">
+                        <li class="ui-block-a"><a data-icon="home" data-role="button" class="ui-btn-active ui-state-persist ui-btn ui-btn-up-a ui-btn-icon-top" href="#page_reviews_list" data-corners="false" data-shadow="false" data-iconshadow="true" data-inline="false" data-wrapperels="span" data-iconpos="top"><span class="ui-btn-inner"><span class="ui-btn-text">Home</span><span class="ui-icon ui-icon-home ui-icon-shadow"></span></span></a></li>
+                        <li class="ui-block-b"><a data-icon="search" data-role="button" href="#page_product_search" data-corners="false" data-shadow="false" data-iconshadow="true" data-inline="false" data-wrapperels="span" class="ui-btn ui-btn-up-a ui-btn-icon-top" data-iconpos="top"><span class="ui-btn-inner"><span class="ui-btn-text">Search</span><span class="ui-icon ui-icon-search ui-icon-shadow"></span></span></a></li>
+                        <li class="ui-block-c"><a data-icon="search" data-role="button" href="#page_cart" data-corners="false" data-shadow="false" data-iconshadow="true" data-inline="false" data-wrapperels="span" class="ui-btn ui-btn-up-a ui-btn-icon-top" data-iconpos="top"><span class="ui-btn-inner"><span class="ui-btn-text">My List</span><span class="ui-icon ui-icon-search ui-icon-shadow"></span></span></a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <!-- detail page -->
+        <div data-theme="a" id="page_product_details" data-role="page" data-url="page_product_details">
+
+            <div data-position="fixed" data-role="header">
+                <h1>Product Details</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+            </div><!-- /content -->
+            <div><a data-icon="arrow-l" data-role="button" href="#page_reviews_list">Back</a></div>
+
+            <div data-position="fixed" data-id="main-footer" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a data-icon="home" data-role="button" class="ui-btn-active ui-state-persist" href="#page_reviews_list">Home</a></li>
+                        <li><a data-icon="search" data-role="button" href="#page_product_search">Search</a></li>
+                        <li><a data-icon="search" data-role="button" href="#page_cart">My List</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+        </div><!-- /page --> 
+
+        <!-- search page -->
+        <div data-theme="a" id="page_product_search" data-role="page" data-url="page_product_search">
+
+            <div data-position="fixed" data-role="header">
+                <h1>Add Product</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <form id="product_search_search_form" method="GET" action="#page_product_search">
+                    <label for="product_search_search_term">What are you looking for?</label>
+                    <input type="search" id="product_search_search_term" name="product" />
+                    <input type="submit" id="product_search_search_button" value="Search" name="go" />
+                </form>
+                <ul id="search_results_listview" data-inset="true" data-role="listview">
+                </ul>
+                <div id="more_button"></div>
+            </div><!-- /content -->
+
+            <div data-position="fixed" data-id="main-footer" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a data-icon="home" data-role="button" href="#page_reviews_list">Home</a></li>
+                        <li><a data-icon="search" data-role="button" class="ui-btn-active ui-state-persist" href="#page_product_search">Search</a></li>
+                        <li><a data-icon="search" data-role="button" href="#page_cart">My List</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <!-- search details -->
+        <div data-theme="a" id="page_search_details" data-role="page" data-url="page_search_details">
+
+            <div data-position="fixed" data-role="header">
+                <h1>Product Details</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+            </div><!-- /content -->
+            <div><a data-icon="arrow-l" data-role="button" href="#page_product_search">Back to Search</a></div>
+
+            <div data-position="fixed" data-id="main-footer" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a data-icon="home" data-role="button" href="#page_reviews_list">Home</a></li>
+                        <li><a data-icon="search" data-role="button" class="ui-btn-active ui-state-persist" href="#page_product_search">Search</a></li>
+                        <li><a data-icon="search" data-role="button" href="#page_cart">My List</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+        
+        <!-- cart details -->
+        <div data-theme="a" id="page_details_cart" data-role="page" data-url="page_details_cart">
+
+            <div data-position="fixed" data-role="header">
+                <h1>Product Details</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+            </div><!-- /content -->
+        <div>
+            <a data-icon="delete" data-role="button" id="button_remove_from_cart" href="#page_cart">Delete From My List</a>
+            <a data-icon="arrow-l" data-role="button" href="#page_cart">Back</a>
+        </div>
+
+            <div data-position="fixed" data-id="main-footer" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a data-icon="home" data-role="button" href="#page_reviews_list">Home</a></li>
+                        <li><a data-icon="search" data-role="button" href="#page_product_search">Search</a></li>
+                        <li><a data-icon="search" class="ui-btn-active ui-state-persist" data-role="button" href="#page_cart">My List</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <!-- cart page -->
+        <div data-theme="a" id="page_cart" data-role="page" data-url="page_cart">
+
+            <div data-position="fixed" data-role="header">
+                <h1>My List</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <ul id="cart_listview" data-inset="true" data-role="listview">
+                </ul>
+            </div><!-- /content -->
+            
+            <div data-position="fixed" data-id="main-footer" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a data-icon="home" data-role="button" href="#page_reviews_list">Home</a></li>
+                        <li><a data-icon="search" data-role="button" href="#page_product_search">Search</a></li>
+                        <li><a data-icon="search" class="ui-btn-active ui-state-persist" data-role="button" href="#page_cart">My List</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+        
+        <!-- stores page -->
+        <div data-theme="a" id="page_stores" data-role="page" data-url="page_stores">
+
+            <div data-position="fixed" data-role="header">
+                <h1>Nearby Stores</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <ul id="stores_listview" data-inset="true" data-role="listview">
+                </ul>
+            </div><!-- /content -->
+            
+            <div data-position="fixed" data-id="main-footer" data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a data-icon="home" data-role="button" href="#page_reviews_list">Home</a></li>
+                        <li><a data-icon="search" data-role="button" href="#page_product_search">Search</a></li>
+                        <li><a data-icon="search" class="ui-btn-active ui-state-persist" data-role="button" href="#page_cart">My List</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+    
+
+
+
+
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div></body></html>
